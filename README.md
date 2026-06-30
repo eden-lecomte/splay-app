@@ -8,7 +8,20 @@ and the cross-section drawing updates live.
 
 ---
 
-## 🚀 Quick start (read this first)
+## 🌐 Just want to use it? (no install needed)
+
+Open this link in any web browser — on a computer, phone, or tablet:
+
+### 👉 https://eden-lecomte.github.io/splay-app/
+
+That's it. Nothing to install. Bookmark it for next time.
+
+*(This page updates automatically whenever the app changes. If you ever see an old
+version, refresh the page.)*
+
+---
+
+## 🚀 Run it on your own computer (for editing / development)
 
 You need the app running on your computer so you can open it in a web browser.
 Follow these steps **in order**. You only do steps 1–2 once.
