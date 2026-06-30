@@ -21,44 +21,47 @@ version, refresh the page.)*
 
 ---
 
-## 🚀 Run it on your own computer (for editing / development)
+## 🖥️ Run it on your own computer (no terminal needed)
 
-You need the app running on your computer so you can open it in a web browser.
-Follow these steps **in order**. You only do steps 1–2 once.
+This lets you run SPLAY locally — handy offline, or for trying changes.
+You need **Node.js** installed first (the "LTS" version from <https://nodejs.org> —
+just click through the installer with the default options).
 
-### 1. Install Node.js (one time only)
-If you don't already have it, download and install **Node.js** (the "LTS" version
-is fine) from <https://nodejs.org>. Click through the installer with the default
-options.
+### Windows — the easy way (double-click)
 
-### 2. Open a terminal in this folder
-- **Windows:** open the `splay-app` folder, click the address bar, type `cmd`, press Enter.
-- **Mac:** right-click the `splay-app` folder → *Services* → *New Terminal at Folder*.
-- **Linux:** open your file manager to the `splay-app` folder and choose *Open Terminal Here*.
+**1. Get the files onto your computer.**
+On the project's GitHub page, click the green **`< > Code`** button →
+**Download ZIP**. Then find the downloaded file, right-click it → **Extract All**.
 
-A terminal is just a window where you type commands. You'll do that next.
+> Direct download link:
+> https://github.com/eden-lecomte/splay-app/archive/refs/heads/master.zip
 
-### 3. Install the app's parts (one time only)
-Type this and press Enter. It downloads everything the app needs. Wait for it to finish.
+**2. Open the extracted `splay-app` folder and double-click `start-windows.bat`.**
+
+That's it. The first time, it sets itself up (a minute or two), then a browser
+window opens with the app. **To stop it, just close the black window.**
+
+> 💡 If Windows shows a blue *"Windows protected your PC"* box, that's only because
+> the file isn't from the app store. Click **More info → Run anyway**. It's safe —
+> it just runs the app.
+>
+> **Next time:** open the same folder and double-click `start-windows.bat` again.
+
+### Mac / Linux
+
+Double-click **`start.sh`** (or in a terminal: `./start.sh`). Same behaviour — it
+installs on first run and opens the browser.
+
+### Manual way (any OS, using a terminal)
+
+If you prefer typing commands, open a terminal in this folder and run:
+
+```bash
+npm install     # first time only — downloads what the app needs
+npm run dev      # starts the app, then open the http://localhost:5173/ link it prints
 ```
-npm install
-```
 
-### 4. Start the app
-Type this and press Enter:
-```
-npm run dev
-```
-You'll see a line like `Local: http://localhost:5173/`.
-
-### 5. Open it in your browser
-Hold **Ctrl** (or **Cmd** on Mac) and click that `http://localhost:5173/` link,
-or copy it into your web browser's address bar. The app appears. 🎉
-
-### 6. Stop the app when you're done
-Click back in the terminal window and press **Ctrl + C**.
-
-> **Next time** you just want to use it: do steps 2, 4, and 5 (skip the installs).
+Press **Ctrl + C** in the terminal to stop it.
 
 ---
 
