@@ -442,26 +442,26 @@ export default function SPLAYApp() {
           break;
       }
     }
-    // Floor intersections (x and y points)
-    const lineDA = { x: pointD.x - pointA.x, y: ceilingYAtD - pointA.y };
-    const lineCB = { x: pointC.x - pointB.x, y: ceilingYAtC - pointB.y };
+     // Floor intersections (x and y points) — diagonal light-ray paths through the lightwell
+    const lineBD = { x: pointD.x - pointB.x, y: ceilingYAtD - pointB.y };
+    const lineAC = { x: pointC.x - pointA.x, y: ceilingYAtC - pointA.y };
 
-    // Extend lines to floor
+    // Extend b-d and a-c to the floor
     let pointX: Point;
     let pointY: Point;
 
-    if (Math.abs(lineDA.x) < 0.001) {
-      pointX = { x: pointA.x, y: floorY };
+    if (Math.abs(lineBD.x) < 0.001) {
+      pointX = { x: pointD.x, y: floorY };
     } else {
-      const slopeDA = lineDA.y / lineDA.x;
-      pointX = { x: pointA.x + (floorY - pointA.y) / slopeDA, y: floorY };
+      const slopeBD = lineBD.y / lineBD.x;
+      pointX = { x: pointD.x + (floorY - ceilingYAtD) / slopeBD, y: floorY };
     }
 
-    if (Math.abs(lineCB.x) < 0.001) {
-      pointY = { x: pointB.x, y: floorY };
+    if (Math.abs(lineAC.x) < 0.001) {
+      pointY = { x: pointC.x, y: floorY };
     } else {
-      const slopeCB = lineCB.y / lineCB.x;
-      pointY = { x: pointB.x + (floorY - pointB.y) / slopeCB, y: floorY };
+      const slopeAC = lineAC.y / lineAC.x;
+      pointY = { x: pointC.x + (floorY - ceilingYAtC) / slopeAC, y: floorY };
     }
     // Clamp to walls
     pointX.x = Math.max(leftWallX, Math.min(rightWallX, pointX.x));
